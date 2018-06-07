@@ -1,13 +1,38 @@
-<h1>These are devoured</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-center">Eat Da Burger</h1>
+  </div>
+</div>
+<div class="container bg-warning">
+
+<div class="row bg-warning p-3 text-center">
+<div id="burger">
+ <form id="burger-form">
+  <input type="text" id="add-burger" required><button type="submit" class="text-center">Add Burger</button>
+ </form>
+</div>
+</div>
+</div>
+
+
+<div class="bg-danger"></div>
+<div class="bg-success"></div>
+
+<div class="container">
+<div class="row">
+<div class="col-6" id="devoured">
+<h1>Devoured... </h1>
 
 {{#each items}}
   {{#if devoured}}
   <p>{{burger_name}} - {{devoured}}</p>
   {{/if}}
 {{/each}}
+</div>
 
 
-<h1>These are read to be eaten</h1>
+<div class="col-6" id="ready-to-eat">
+<h1>Ready to Eat!</h1>
 
 {{#each items}}
   {{#if devoured}}
@@ -15,10 +40,22 @@
   <p>{{burger_name}} - <button class="devour" info="{{id}}"> Devour</button></p>
   {{/if}}
 {{/each}}
- 
- <form id="burger-form">
-  <input type="text" id="add-burger" required><button type="submit">Add Burger</button>
- </form>
+</div>
+</div>
+</div>
+
+<footer></footer>
+</div>
+
+<style>
+  .jumbotron{background-color: tan; height: 150px; margin: 0;}
+  body{background-color: white;}
+  #burger{background-color: yellow;}
+  .bg-success, .bg-danger{height: 30px;}
+  #ready-to-eat, #devoured{background-color:saddlebrown;}
+  footer{background-color: tan; height: 50px;}
+  div{margin:0;}
+</style>
 
  <script>
    // Adds burger
@@ -38,5 +75,8 @@
     var id = $(this).attr("info")
     console.log(id)
   })
+
+  // Update POST update devoured to true
+
 
  </script>
