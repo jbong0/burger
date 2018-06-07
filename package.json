@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/jbong0/burger/issues"
   },
-  "homepage": "https://github.com/jbong0/burger#readme"
+  "homepage": "https://github.com/jbong0/burger#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
 }

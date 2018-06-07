@@ -1,0 +1,42 @@
+<h1>These are devoured</h1>
+
+{{#each items}}
+  {{#if devoured}}
+  <p>{{burger_name}} - {{devoured}}</p>
+  {{/if}}
+{{/each}}
+
+
+<h1>These are read to be eaten</h1>
+
+{{#each items}}
+  {{#if devoured}}
+    {{else}}
+  <p>{{burger_name}} - <button class="devour" info="{{id}}"> Devour</button></p>
+  {{/if}}
+{{/each}}
+ 
+ <form id="burger-form">
+  <input type="text" id="add-burger" required><button type="submit">Add Burger</button>
+ </form>
+
+ <script>
+   // Adds burger
+   $("#burger-form").on("submit", function(e){
+     e.preventDefault()
+     var name = $("#add-burger").val()
+     console.log(name)
+
+     $.post("add/" + name, function(response){
+       console.log(response)
+       location.reload()
+     })    
+   })
+
+  // Devour Burger
+  $(".devour").on("click", function(){
+    var id = $(this).attr("info")
+    console.log(id)
+  })
+
+ </script>
