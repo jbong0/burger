@@ -11,6 +11,7 @@ var orm = {
         })
     },
     updateOne:() => {
+     
 
     }
 }

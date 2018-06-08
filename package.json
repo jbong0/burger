@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jbong0/burger#readme",
   "dependencies": {
+    "config.json": "0.0.4",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "mysql": "^2.15.0"

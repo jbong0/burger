@@ -1,0 +1,24 @@
+.jumbotron{
+    background-color: tan; 
+    height: 150px; 
+    margin: 0; 
+    margin-top: 30px;}
+body{
+    background-color: orange; 
+    font-family: 'Pacifico', cursive;}
+.bg-success{
+    background-color: green;
+    height: 30px;
+}
+
+.bg-danger{
+    background-color: red;
+    height: 30px;
+}
+#ready-to-eat, #devoured{
+    background-color:saddlebrown;}
+footer{
+    background-color: tan; height: 50px;}
+div{
+    margin:0;
+}

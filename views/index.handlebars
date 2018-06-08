@@ -46,15 +46,13 @@
 
 <footer></footer>
 </div>
-
 <style>
-  .jumbotron{background-color: tan; height: 150px; margin: 0; margin-top: 30px;}
-  body{background-color: orange; font-family: 'Pacifico', cursive;}
+  .jumbotron{background-color: tan; height: 150px; margin: 0; margin-top: 30px; border-radius: 30px;}
+  body{background-color: aqua; font-family: 'Pacifico', cursive;}
   .bg-success, .bg-danger{height: 30px;}
   #ready-to-eat, #devoured{background-color:saddlebrown;}
-  footer{background-color: tan; height: 50px;}
+  footer{background-color: tan; height: 50px;border-radius: 30px;}
   div{margin:0;}
-  
 </style>
 
  <script>
@@ -74,9 +72,13 @@
   $(".devour").on("click", function(){
     var id = $(this).attr("info")
     console.log(id)
+    
+    // Update POST update devoured to true
+
   })
 
-  // Update POST update devoured to true
+
+  
 
 
  </script>
