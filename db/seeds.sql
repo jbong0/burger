@@ -5,6 +5,6 @@ INSERT INTO burgers (burger_name, devoured)
 VALUES ('Buttery Jack With Bacon and Swiss Cheese', false);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES ('Big Mac', false);
+VALUES ('Big Mac', true);
 
 

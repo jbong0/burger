@@ -1,4 +1,4 @@
-/* .jumbotron{
+.jumbotron{
     background-color: tan; 
     height: 150px; 
     margin: 0; 
@@ -24,12 +24,5 @@ footer{
     background-color: tan; height: 50px;}
 div{
     margin:0;
-} */
+}
 
-
-.jumbotron{background-color: tan; height: 150px; margin: 0; margin-top: 30px; border-radius: 30px;}
-body{background-color: #ffb266; font-family: 'Pacifico', cursive;}
-.bg-success, .bg-danger{height: 30px;}
-#ready-to-eat, #devoured{background-color:saddlebrown;}
-footer{background-color: tan; height: 50px;border-radius: 30px;}
-div{margin:0;}
