@@ -5,10 +5,10 @@
 </div>
 <div class="container bg-warning">
 
-<div class="row bg-warning p-3 text-center">
-<div id="burger">
+<div class="row bg-warning p-3">
+<div class="col-12 text-center">
  <form id="burger-form">
-  <input type="text" id="add-burger" required><button type="submit" class="text-center">Add Burger</button>
+ <input type="text" id="add-burger" required> <button type="submit" class="btn btn-outline-danger">Add Burger</button>
  </form>
 </div>
 </div>
@@ -20,24 +20,24 @@
 
 <div class="container">
 <div class="row">
-<div class="col-6" id="devoured">
-<h1>Devoured... </h1>
 
-{{#each items}}
-  {{#if devoured}}
-  <p>{{burger_name}} - {{devoured}}</p>
-  {{/if}}
-{{/each}}
-</div>
-
-
-<div class="col-6" id="ready-to-eat">
-<h1>Ready to Eat!</h1>
+<div class="col-6 text-center" id="ready-to-eat">
+<h1 class="text-white mb-4">Ready to Eat!</h1>
 
 {{#each items}}
   {{#if devoured}}
     {{else}}
-  <p>{{burger_name}} - <button class="devour" info="{{id}}"> Devour</button></p>
+  <p>{{burger_name}} <button class="devour btn btn-outline-success" info="{{id}}"> Eat Me</button></p>
+  {{/if}}
+{{/each}}
+</div>
+
+<div class="col-6 text-center" id="devoured">
+<h1 class="text-white mb-4">Devoured... </h1>
+
+{{#each items}}
+  {{#if devoured}}
+  <p>{{burger_name}} - {{devoured}}</p>
   {{/if}}
 {{/each}}
 </div>
@@ -48,13 +48,13 @@
 </div>
 
 <style>
-  .jumbotron{background-color: tan; height: 150px; margin: 0;}
-  body{background-color: white;}
-  #burger{background-color: yellow;}
+  .jumbotron{background-color: tan; height: 150px; margin: 0; margin-top: 30px;}
+  body{background-color: orange; font-family: 'Pacifico', cursive;}
   .bg-success, .bg-danger{height: 30px;}
   #ready-to-eat, #devoured{background-color:saddlebrown;}
   footer{background-color: tan; height: 50px;}
   div{margin:0;}
+  
 </style>
 
  <script>
