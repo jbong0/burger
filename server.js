@@ -4,6 +4,7 @@ var exphbs = require('express-handlebars')
 var bodyParser = require('body-parser')
 var controller = require("./controllers/burgers_controllers")
 
+
 app.engine('handlebars', exphbs({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
 

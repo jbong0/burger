@@ -8,7 +8,7 @@
 <div class="row bg-warning p-3">
    <div class="col-md-6 text-center">
    <h5 class="text-danger">Burgers Eaten: </h5>
-   <div id="burger-counter text-danger"><p>0</p></div>
+   <div class=" text-danger"><p id="burger-counter"></p></div>
  </div>
 <div class="col-md-6 text-center">
  <form id="burger-form">
@@ -67,27 +67,32 @@
      var name = $("#add-burger").val()
      console.log(name)
 
+
      $.post("add/" + name, function(response){
-       console.log(response)
-       location.reload()
+        location.reload()
+        console.log(response)
      })    
    })
 
   // Devour Burger
   $(".devour").on("click", function(){
+    updateCounter()
     var id = $(this).attr("info")
     console.log(id)
     
     // Update POST update devoured to true
     $.post("burgers/" + id, function(response){
-      console.log(response)
       location.reload()
-    })
+      console.log(response)
+    })  
 
   })
 
+  var clicks = 0
 
-  
-
-
+  function updateCounter(){
+    var burgerCounter = $("#burger-counter")
+    clicks += 1
+    burgerCounter.text(clicks)
+  }
  </script>
